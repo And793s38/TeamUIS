@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Grupo
+comment0.text=\r\n\ Esta\ clase\ crea\ y\ gestiona\ los\ diferentes\ grupos\ de\ estudio.\r\n\ \r\n\ @author\ (teamUIs)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=estudiantes\ tutor\ detalles
+comment1.target=Grupo(java.util.ArrayList,\ Tutor,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Grupo\r\n
+comment2.params=estudiantes\ materia\ detalles
+comment2.target=Grupo(java.util.ArrayList,\ Materia,\ java.lang.String)
+numComments=3

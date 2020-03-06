@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Materia
+comment0.text=\r\n\ Esta\ clase\ crea\ las\ materias\ requeridas\ por\ los\ estudiantes.\r\n\r\n\ @author\ (TeamUis)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=nombre\ codigo
+comment1.target=Materia(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Materia\r\n
+numComments=2
