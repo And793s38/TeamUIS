@@ -12,6 +12,9 @@ private String nombre;
 private String codigo;
 private String carrera;
 private String telefono;
+/*
+ * Algo cambiado
+ */
 
 /**
 * Constructor for objects of class Estudiante

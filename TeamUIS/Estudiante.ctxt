@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Estudiante
-comment0.text=\r\n\ Esta\ clase\ crea\ y\ guarda\ informaci\u00F3n\ sobre\ los\ estudiantes.\r\n\r\n\ @author\ (TeamUis)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Esta\ clase\ crea\ y\ guarda\ informaci\u00F3n\ sobre\ los\ estudiantes.\n\n\ @author\ (TeamUis)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=nombre\ codigo\ carrera\ telefono
 comment1.target=Estudiante(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Estudiante\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Estudiante\n
 numComments=2
