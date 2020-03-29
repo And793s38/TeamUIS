@@ -9,7 +9,7 @@ public class Estudiante
 {
 // instance variables - replace the example below with your own
 private String nombre;
-private String codigo;
+private int codigo;
 private String carrera;
 private String telefono;
 /*
@@ -19,7 +19,7 @@ private String telefono;
 /**
 * Constructor for objects of class Estudiante
 */
-public Estudiante(String nombre, String codigo, String carrera, String telefono)
+public Estudiante(String nombre, int codigo, String carrera, String telefono)
 {
 // initialise instance variables
 this.nombre = nombre;

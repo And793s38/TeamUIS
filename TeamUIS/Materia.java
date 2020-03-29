@@ -10,6 +10,7 @@ public class Materia
 // instance variables - replace the example below with your own
 private String nombre;
 private String codigo;
+
 /**
 * Constructor for objects of class Materia
 */

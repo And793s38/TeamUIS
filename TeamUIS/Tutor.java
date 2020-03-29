@@ -13,7 +13,6 @@ public class Tutor
     private String codigo;
     private String carrera;
     private String telefono;
-    private Materia materia;
 
     /**
      * Constructor for objects of class Tutor
@@ -27,7 +26,6 @@ public Tutor(String nombre, String codigo, String carrera, String telefono, Mate
         this.codigo = codigo;
         this.carrera = carrera;
         this.telefono = telefono;
-        this.materia = materia;
         
     }
 }
