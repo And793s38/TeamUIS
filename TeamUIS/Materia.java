@@ -26,7 +26,6 @@ public class Materia {
         this.codigo = codigo;
     }
 
-    
     /**
      * Constructor for objects of class Materia
      */

@@ -1,7 +1,15 @@
 #BlueJ class context
 comment0.target=Materia
 comment0.text=\r\n\ Esta\ clase\ crea\ las\ materias\ requeridas\ por\ los\ estudiantes.\r\n\r\n\ @author\ (TeamUis)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=nombre\ codigo
-comment1.target=Materia(java.lang.String,\ java.lang.String)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Materia\r\n
-numComments=2
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment2.params=nombre
+comment2.target=void\ setNombre(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getCodigo()
+comment4.params=codigo
+comment4.target=void\ setCodigo(java.lang.String)
+comment5.params=nombre\ codigo
+comment5.target=Materia(java.lang.String,\ java.lang.String)
+comment5.text=\r\n\ Constructor\ for\ objects\ of\ class\ Materia\r\n
+numComments=6

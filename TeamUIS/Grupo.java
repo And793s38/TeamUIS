@@ -56,8 +56,6 @@ public class Grupo {
         this.detalles = detalles;
     }
 
-    
-    
     /**
      * Constructor for objects of class Grupo
      */

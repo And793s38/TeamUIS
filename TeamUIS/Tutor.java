@@ -44,8 +44,6 @@ public class Tutor {
         this.telefono = telefono;
     }
 
-    
-    
     /**
      * Constructor for objects of class Tutor
      */
