@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * Esta clase crea y gestiona los diferentes grupos de estudio.
  * 
- * @author (teamUIs)
+ * @author TeamUis
  * @version (a version number or a date)
  */
 
@@ -15,7 +15,8 @@ public class Grupo {
     private Tutor tutor;
     private Materia materia;
     private String detalles;
-
+    
+    /*getters y setters */
     public ArrayList<Estudiante> getEstudiantes() {
         return estudiantes;
     }
@@ -57,20 +58,48 @@ public class Grupo {
     }
 
     /**
-     * Constructor for objects of class Grupo
+     * Constructor para crear grupo con tutor
      */
 
-    public Grupo(ArrayList<Estudiante> estudiantes, Tutor tutor, String detalles) {
+    public Grupo(Estudiante estudiante, Tutor tutor, String detalles) {
         // initialise instance variables
-        this.estudiantes = estudiantes;
+        estudiantes = new ArrayList();
+        estudiantes.add(estudiante);
         this.tutor = tutor;
         this.detalles = detalles;
     }
 
-    public Grupo(ArrayList<Estudiante> estudiantes, Materia materia, String detalles) {
+    /**
+     * Constructor para crear grupo con solo estudiantes
+     */
+    public Grupo(Estudiante estudiante, Materia materia, String detalles) {
         // initialise instance variables
-        this.estudiantes = estudiantes;
+        estudiantes = new ArrayList();
+        estudiantes.add(estudiante);
         this.materia = materia;
         this.detalles = detalles;
+    }
+    
+    public void agregarEstudiante(Estudiante estudiante){
+        estudiantes.add(estudiante);
+    }
+    
+    public void eliminarEstudiante(Estudiante estudiante){
+        estudiantes.remove(estudiante);
+    }
+    
+    public void listarIntegrantesGrupo(){
+    System.out.println("Integrantes:");
+    for(Estudiante E: estudiantes){
+        System.out.println(E.toString());
+    }
+    if(tutor == null){
+        System.out.println("Grupo de solo estudiantes");
+    }else{
+        System.out.println("El tutor de este grupo es:");
+        System.out.println(tutor.toString());
+
+    }
+    
     }
 }

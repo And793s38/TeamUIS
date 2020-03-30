@@ -1,16 +1,17 @@
 /**
  * Esta clasea crea los tutores con sus respectivas matertias.
  * 
- * @author (your name)
+ * @author TeamUis
  * @version (a version number or a date)
  */
 
 public class Tutor {
-    // instance variables - replace the example below with your own
+    // instance variables
     private String nombre;
     private String codigo;
     private String carrera;
     private String telefono;
+    private Materia materia;
 
     public String getNombre() {
         return nombre;
@@ -54,6 +55,10 @@ public class Tutor {
         this.codigo = codigo;
         this.carrera = carrera;
         this.telefono = telefono;
-
+        this.materia = materia;
+    }
+    
+    public String toString(){ //metodo para convertir a string
+    return "Tutor: "+nombre+ ", " + codigo+ ", " + carrera+ ", " + telefono+ ", " + materia+ "\n ";
     }
 }
