@@ -1,5 +1,6 @@
 
 import java.util.*;
+
 /**
  * Este contenedor aguarda las materias.
  * 
@@ -11,8 +12,8 @@ public class contenedorMaterias
 {
     private ArrayList<Materia> materias;
     int id = 0;
-    
-    /** 
+
+    /**
      * Función: Constructor de contenedorMaterias.
      * 
      * @param none.
@@ -23,9 +24,9 @@ public class contenedorMaterias
         materias = new ArrayList();
     }
 
-    /** 
-     * Función: metodo que al agregar materias va autoincrementado su id para posteriores 
-     * busquedas y evitar duplicidad de materrias.
+    /**
+     * Función: metodo que al agregar materias va autoincrementado su id para
+     * posteriores busquedas y evitar duplicidad de materrias.
      * 
      * @param none.
      * @return none.
@@ -37,8 +38,7 @@ public class contenedorMaterias
         materias.add(materia);
     }
 
-    
-    /** 
+    /**
      * Función: este metodo elimina una Materia de ArrayList<Materia>
      * 
      * @param none.
@@ -48,8 +48,9 @@ public class contenedorMaterias
         materias.remove(materia);
     }
 
-    /** 
-     * Función: este metodo genera un listado con todas las Materias que estan registradas.
+    /**
+     * Función: este metodo genera un listado con todas las Materias que estan
+     * registradas.
      * 
      * @param none.
      * @return materias.
@@ -58,8 +59,9 @@ public class contenedorMaterias
         return materias;
     }
 
-    /** 
-     * Función: genera un string con todos los datos guardados que estaban dentro de el contenedor de Materia.
+    /**
+     * Función: genera un string con todos los datos guardados que estaban dentro de
+     * el contenedor de Materia.
      * 
      * @param none.
      * @return none.
@@ -73,8 +75,9 @@ public class contenedorMaterias
         System.out.println("----------------------------");
     }
 
-    /** 
-     * Función: busca materias mediante su id, este se revisa en el ArrayList de Materias para confirmar que existe.
+    /**
+     * Función: busca materias mediante su id, este se revisa en el ArrayList de
+     * Materias para confirmar que existe.
      * 
      * @param id id de una materia.
      * @return busqueda.

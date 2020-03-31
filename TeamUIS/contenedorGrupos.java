@@ -1,4 +1,5 @@
 import java.util.*;
+
 /**
  * Write a description of class contenedorGrupos here.
  * 
@@ -12,7 +13,8 @@ public class contenedorGrupos
     int id = 0;
 
     /**
-     * Función: Constructor de la clase contenedorGrupos generando un ArrayList de grupos
+     * Función: Constructor de la clase contenedorGrupos generando un ArrayList de
+     * grupos
      * 
      * @param none.
      * @return none.
@@ -20,10 +22,10 @@ public class contenedorGrupos
     public contenedorGrupos() {
         grupos = new ArrayList();
     }
-    
-    /** 
-     * Función: metodo que al agregar grupos va autoincrementado su id para posteriores 
-     * busquedas y evitar duplicidad de grupos
+
+    /**
+     * Función: metodo que al agregar grupos va autoincrementado su id para
+     * posteriores busquedas y evitar duplicidad de grupos
      * 
      * @param none.
      * @return none.
@@ -34,7 +36,7 @@ public class contenedorGrupos
         grupos.add(grupo);
     }
 
-    /** 
+    /**
      * Función: este metodo elimina un grupo
      * 
      * @param none.
@@ -44,8 +46,9 @@ public class contenedorGrupos
         grupos.remove(grupo);
     }
 
-    /** 
-     * Función: este metodo genera un listado con todas los Grupos que estan registrados, revisando en el ArrayList<Grupo>.
+    /**
+     * Función: este metodo genera un listado con todas los Grupos que estan
+     * registrados, revisando en el ArrayList<Grupo>.
      * 
      * @param none.
      * @return grupos.
@@ -54,11 +57,12 @@ public class contenedorGrupos
         return grupos;
     }
 
-    /** 
+    /**
      * Función: genera un string con todos los datos guardados.
      * 
      * @param none.
-     * @return cadena de string con los objetos que estaban dentro de el contenedor de Grupos.
+     * @return cadena de string con los objetos que estaban dentro de el contenedor
+     *         de Grupos.
      */
     public void ToStringGrupos() {
         System.out.println("----------------------------");
@@ -69,8 +73,7 @@ public class contenedorGrupos
         System.out.println("----------------------------");
     }
 
-    
-    /** 
+    /**
      * Función: busca grupos mediante su id.
      * 
      * @param id id de un grupo.

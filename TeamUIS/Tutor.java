@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * Esta clasea crea los tutores con sus respectivas matertias.
  * 
@@ -11,7 +12,8 @@ public class Tutor {
     private String codigo;
     private String carrera;
     private String telefono;
-    private Materia materia;
+    private ArrayList<Materia> materias;
+    materias = new ArrayList();
 
     /**
      * Getters y setters 
@@ -48,12 +50,16 @@ public class Tutor {
         this.telefono = telefono;
     }
 
-    /** 
-     * Función: inicializar el objeto Tutor.
-     * 
-     * @param nombre del Tutor, codigo del tutor, carrera a la cual pertence, 
-     * numero de telefono para poder relizar un contacto en caso de ser necesario y una Materia la cual el va dar tutorias.
-     * @return none.
+    public void agregarMateria(Materia materia) {
+        materias.add(materia);
+    }
+
+    public void EliminarMateria(Materia materia) {
+        materias.remove(materia);
+    }
+
+    /**
+     * Constructor for objects of class Tutor
      */
     public Tutor(String nombre, String codigo, String carrera, String telefono, Materia materia) {
         // initialise instance variables
@@ -61,17 +67,10 @@ public class Tutor {
         this.codigo = codigo;
         this.carrera = carrera;
         this.telefono = telefono;
-        this.materia = materia;
+        materias.add(materia);
     }
 
-    /** 
-     * Función: genera un string con todos los datos guardados.
-     * 
-     * @param none.
-     * @return cadena de string con los datos que estaban dentro de el objeto.
-     */
-    public String toString() { 
-        return "Tutor: " + nombre + ", Codigo: " + codigo + ", Carrera: " + carrera + ", Telefono: " + telefono
-                + ", Materia: " + materia.getNombre() + "\n ";
+    public String toString() { // metodo para convertir a string
+        return "Tutor: " + nombre + ", Codigo: " + codigo + ", Carrera: " + carrera + ", Telefono: " + telefono;
     }
 }
