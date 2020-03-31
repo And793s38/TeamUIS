@@ -6,12 +6,11 @@
  */
 
 public class Estudiante {
-    // instance variables 
+    // instance variables
     private String nombre;
     private String codigo;
     private String carrera;
     private String telefono;
-    
 
     public String getNombre() {
         return nombre;
@@ -55,8 +54,8 @@ public class Estudiante {
         this.carrera = carrera;
         this.telefono = telefono;
     }
-    
-    public String toString(){ //metodo para convertir a string
-    return "Estudiante: "+nombre+ ", " + codigo+ ", " + carrera+ ", " + telefono+ "\n ";
+
+    public String toString() { // metodo para convertir a string
+        return "Estudiante: " + nombre + ", Codigo: " + codigo + ", " + carrera + ", " + telefono;
     }
 }

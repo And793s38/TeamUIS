@@ -57,8 +57,9 @@ public class Tutor {
         this.telefono = telefono;
         this.materia = materia;
     }
-    
-    public String toString(){ //metodo para convertir a string
-    return "Tutor: "+nombre+ ", " + codigo+ ", " + carrera+ ", " + telefono+ ", " + materia+ "\n ";
+
+    public String toString() { // metodo para convertir a string
+        return "Tutor: " + nombre + ", Codigo: " + codigo + ", Carrera: " + carrera + ", Telefono: " + telefono
+                + ", Materia: " + materia.getNombre() + "\n ";
     }
 }

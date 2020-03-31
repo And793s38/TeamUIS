@@ -11,12 +11,12 @@ import java.util.*;
 public class Grupo {
     // instance variables - replace the example below with your own
     private ArrayList<Estudiante> estudiantes;
-    Estudiante estudiante;
     private Tutor tutor;
     private Materia materia;
     private String detalles;
-    
-    /*getters y setters */
+    private int id;
+
+    /* getters y setters */
     public ArrayList<Estudiante> getEstudiantes() {
         return estudiantes;
     }
@@ -25,12 +25,12 @@ public class Grupo {
         this.estudiantes = estudiantes;
     }
 
-    public Estudiante getEstudiante() {
-        return estudiante;
+    public int getId() {
+        return id;
     }
 
-    public void setEstudiante(Estudiante estudiante) {
-        this.estudiante = estudiante;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Tutor getTutor() {
@@ -58,13 +58,20 @@ public class Grupo {
     }
 
     /**
+     * Constructor grupo vacío para busquedas
+     */
+    public Grupo() {
+    }
+
+    /**
      * Constructor para crear grupo con tutor
      */
 
-    public Grupo(Estudiante estudiante, Tutor tutor, String detalles) {
+    public Grupo(Estudiante estudiante, Tutor tutor, Materia materia, String detalles) {
         // initialise instance variables
         estudiantes = new ArrayList();
         estudiantes.add(estudiante);
+        this.materia = materia;
         this.tutor = tutor;
         this.detalles = detalles;
     }
@@ -79,27 +86,38 @@ public class Grupo {
         this.materia = materia;
         this.detalles = detalles;
     }
-    
-    public void agregarEstudiante(Estudiante estudiante){
+
+    public void agregarEstudiante(Estudiante estudiante) {
         estudiantes.add(estudiante);
     }
-    
-    public void eliminarEstudiante(Estudiante estudiante){
+
+    public void eliminarEstudiante(Estudiante estudiante) {
         estudiantes.remove(estudiante);
     }
-    
-    public void listarIntegrantesGrupo(){
-    System.out.println("Integrantes:");
-    for(Estudiante E: estudiantes){
-        System.out.println(E.toString());
-    }
-    if(tutor == null){
-        System.out.println("Grupo de solo estudiantes");
-    }else{
-        System.out.println("El tutor de este grupo es:");
-        System.out.println(tutor.toString());
 
+    public void listarIntegrantesGrupo() {
+        System.out.println("----------------------------");
+        System.out.println("Grupo: " + this.id + " Materia: " + this.materia.getNombre());
+        System.out.println("Integrantes:");
+        if (tutor == null) {
+            System.out.println("Grupo de solo estudiantes");
+        } else {
+            System.out.println("El tutor de este grupo es:");
+            System.out.print(tutor.toString());
+        }
+        for (Estudiante E : estudiantes) {
+            System.out.println(E.toString());
+        }
+        System.out.println("----------------------------");
     }
-    
+
+    public String toString() { // metodo para convertir a string
+        if (this.tutor == null) {
+            return "Codigo: " + this.id + ", Materia: " + this.materia.getNombre() + "\n Detalles: " + detalles;
+        } else {
+            return "Codigo: " + this.id + ", Materia: " + this.materia.getNombre() + ", Tutor: "
+                    + this.tutor.getNombre() + "\n Detalles: " + detalles;
+        }
     }
+
 }
