@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Write a description of class Main here.
  * 
@@ -10,7 +12,10 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws Exception {
+        public static void main(String[] args) throws Exception {
+        int dato=0;
+        int accion=30;
+               
         // crear la materias
         Materia Ingles1 = new Materia("Ingles1", "4444");
         Materia Software1 = new Materia("Software", "3333");
@@ -41,9 +46,16 @@ public class Main {
         grupo2.agregarEstudiante(estudiante4);
 
         // crear contendor de grupos
-        contenedorGrupos contenedor = new contenedorGrupos();
-        contenedor.agregarGrupo(grupo1);
-        contenedor.agregarGrupo(grupo2);
+        contenedorGrupos contenedorG = new contenedorGrupos();
+        contenedorG.agregarGrupo(grupo1);
+        contenedorG.agregarGrupo(grupo2);
+        
+        // crear contendor de grupos
+        contenedorMaterias contenedorM = new contenedorMaterias();
+        contenedorM.agregarMateria(Ingles1);
+        contenedorM.agregarMateria(Software1);
+        contenedorM.agregarMateria(Bases1);
+        contenedorM.agregarMateria(Calculo1);
 
         /* imprimir en consola */
         /*
@@ -61,8 +73,76 @@ public class Main {
         // grupo2.listarIntegrantesGrupo();
 
         // lista de grupos
-        /* contenedor.ToStringGrupos(); */
+        /* contenedorG.ToStringGrupos(); */
         System.out.println(" Bienvenido a TeamUIS ");
+
+        System.out.println(" Quieres iniciar como estudiante(1) o Tutor (2)? ");
+        Scanner entradaEscaner = new Scanner (System.in); 
+        try{
+            dato = entradaEscaner.nextInt(); 
+        }
+        catch(Exception excepcion){
+        }
+         
+        if(dato == 1){
+            System.out.println(" Estudiante ");
+            String nombre;
+            String codigo;
+            String carrera;
+            String telefono;
+            System.out.println(" Por favor ingrese su nombre ");
+            nombre = entradaEscaner.nextLine(); 
+            
+            System.out.println(" Su codigo ");
+            codigo = entradaEscaner.nextLine(); 
+            
+            System.out.println(" Su carrera ");
+            carrera = entradaEscaner.nextLine(); 
+            
+            System.out.println(" Su telefono ");
+            telefono = entradaEscaner.nextLine(); 
+            
+            Estudiante Logestudiante = new Estudiante(nombre, codigo, carrera, telefono);
+        
+        }else if(dato == 2){
+            System.out.println(" Tutor ");   
+            String nombre;
+            String codigo;
+            String carrera;
+            String telefono;
+            Materia materia = new Materia();
+            int idM = 0;
+        
+            System.out.println(" Por favor ingrese su nombre ");
+            nombre = entradaEscaner.nextLine(); 
+            System.out.println(" Por favor ingrese su codigo ");
+            codigo = entradaEscaner.nextLine(); 
+            System.out.println(" Por favor ingrese su carrera ");
+            carrera = entradaEscaner.nextLine(); 
+            System.out.println(" Por favor ingrese su telefono ");
+            telefono = entradaEscaner.nextLine(); 
+            
+            while(idM==0){
+                System.out.println(" Por favor ingrese el id de su materia, de no conocerlo digite 0 ");
+                    idM = entradaEscaner.nextInt();
+                    if(idM == 0){
+                        contenedorM.ToStringMaterias();
+                    }else{
+                        materia = contenedorM.buscarMateria(idM);
+                    }
+            }       
+            
+            Tutor Logtutor = new Tutor(nombre, codigo, carrera, telefono, materia);
+            
+        }else{
+            System.out.println(" Entrada no valida "); 
+            accion = 0;
+        }
+
+        while(accion!=0) {
+            System.out.println(" Que desea hacer? "); 
+            accion = 1;
+        }
 
     }
 }

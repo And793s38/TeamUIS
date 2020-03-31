@@ -9,6 +9,7 @@ public class Materia {
     // instance variables - replace the example below with your own
     private String nombre;
     private String codigo;
+    private int id;
 
     public String getNombre() {
         return nombre;
@@ -26,6 +27,22 @@ public class Materia {
         this.codigo = codigo;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     * Constructor for objects of class Materia
+     */
+
+    public Materia() {
+        // initialise instance variables
+    }
+
     /**
      * Constructor for objects of class Materia
      */
@@ -37,6 +54,6 @@ public class Materia {
     }
 
     public String toString() {
-        return nombre + ", " + codigo + "\n ";
+        return "Id: " + id + "Nombre: " + nombre + ", Codigo: " + codigo + "\n ";
     }
 }
