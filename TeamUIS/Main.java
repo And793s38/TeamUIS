@@ -87,18 +87,18 @@ public class Main {
         if(dato == 1){
             System.out.println(" Estudiante ");
             String nombre;
-            String codigo;
-            String carrera;
-            String telefono;
             System.out.println(" Por favor ingrese su nombre ");
             nombre = entradaEscaner.nextLine(); 
             
+            String codigo;
             System.out.println(" Su codigo ");
             codigo = entradaEscaner.nextLine(); 
             
+            String carrera;
             System.out.println(" Su carrera ");
             carrera = entradaEscaner.nextLine(); 
             
+            String telefono;
             System.out.println(" Su telefono ");
             telefono = entradaEscaner.nextLine(); 
             
