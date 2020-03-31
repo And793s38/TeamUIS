@@ -1,18 +1,22 @@
 #BlueJ class context
 comment0.target=contenedorGrupos
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ contenedorGrupos\ here.\r\n\ \r\n\ @author\ TeamUis\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ contenedorGrupos\ here.\r\n\ \r\n\ @author\ TeamUis\r\n\ @version\ 31/03/2020\r\n
 comment1.params=
 comment1.target=contenedorGrupos()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ contenedorGrupos\r\n
+comment1.text=\r\n\ Funci\u00F3n\:\ Constructor\ de\ la\ clase\ contenedorGrupos\ generando\ un\ ArrayList\ de\ grupos\r\n\ \r\n\ @param\ none.\r\n\ @return\ none.\r\n
 comment2.params=grupo
 comment2.target=void\ agregarGrupo(Grupo)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ y\ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ the\ sum\ of\ x\ and\ y\r\n
+comment2.text=\ \r\n\ Funci\u00F3n\:\ metodo\ que\ al\ agregar\ grupos\ va\ autoincrementado\ su\ id\ para\ posteriores\ \r\n\ busquedas\ y\ evitar\ duplicidad\ de\ grupos\r\n\ \r\n\ @param\ none.\r\n\ @return\ none.\r\n
 comment3.params=grupo
 comment3.target=void\ EliminarGrupo(Grupo)
+comment3.text=\ \r\n\ Funci\u00F3n\:\ este\ metodo\ elimina\ un\ grupo\r\n\ \r\n\ @param\ none.\r\n\ @return\ none.\r\n
 comment4.params=
 comment4.target=java.util.ArrayList\ listarGrupos()
+comment4.text=\ \r\n\ Funci\u00F3n\:\ este\ metodo\ genera\ un\ listado\ con\ todas\ los\ Grupos\ que\ estan\ registrados,\ revisando\ en\ el\ ArrayList<Grupo>.\r\n\ \r\n\ @param\ none.\r\n\ @return\ grupos.\r\n
 comment5.params=
 comment5.target=void\ ToStringGrupos()
+comment5.text=\ \r\n\ Funci\u00F3n\:\ genera\ un\ string\ con\ todos\ los\ datos\ guardados.\r\n\ \r\n\ @param\ none.\r\n\ @return\ cadena\ de\ string\ con\ los\ objetos\ que\ estaban\ dentro\ de\ el\ contenedor\ de\ Grupos.\r\n
 comment6.params=idb
 comment6.target=Grupo\ buscarGrupo(int)
+comment6.text=\ \r\n\ Funci\u00F3n\:\ busca\ grupos\ mediante\ su\ id.\r\n\ \r\n\ @param\ id\ id\ de\ un\ grupo.\r\n\ @return\ el\ grupo\ del\ cual\ se\ queria\ encontrar.\r\n
 numComments=7

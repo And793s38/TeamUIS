@@ -1,16 +1,19 @@
 /**
  * Esta clase crea las materias requeridas por los estudiantes.
  *
- * @author (TeamUis)
- * @version (a version number or a date)
+ * @author TeamUis
+ * @version 31/03/2020
  */
 
 public class Materia {
-    // instance variables - replace the example below with your own
+    // instance variables 
     private String nombre;
     private String codigo;
     private int id;
-
+    
+    /**
+     * Getters y setters 
+     */
     public String getNombre() {
         return nombre;
     }
@@ -36,23 +39,31 @@ public class Materia {
     }
 
     /**
-     * Constructor for objects of class Materia
+     * Constructor de la clase Materia para busquedas.
      */
 
-    public Materia() {
-        // initialise instance variables
+    public Materia(){
+        
     }
-
-    /**
-     * Constructor for objects of class Materia
+      
+    /** 
+     * Función: inicializar el objeto Materia.
+     * 
+     * @param nombre de una materia y codigo de esta misma.
+     * @return none.
      */
-
     public Materia(String nombre, String codigo) {
         // initialise instance variables
         this.nombre = nombre;
         this.codigo = codigo;
     }
-
+    
+    /** 
+     * Función: genera un string con todos los datos guardados.
+     * 
+     * @param none.
+     * @return cadena de string con los datos que estaban dentro de el objeto.
+     */
     public String toString() {
         return "Id: " + id + "Nombre: " + nombre + ", Codigo: " + codigo + "\n ";
     }

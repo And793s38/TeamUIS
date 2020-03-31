@@ -2,7 +2,7 @@
  * Esta clase crea y guarda información sobre los estudiantes.
  *
  * @author TeamUis
- * @version (a version number or a date)
+ * @version 31/03/2020
  */
 
 public class Estudiante {
@@ -12,6 +12,9 @@ public class Estudiante {
     private String carrera;
     private String telefono;
 
+    /**
+     * Getters y setters 
+     */
     public String getNombre() {
         return nombre;
     }
@@ -44,8 +47,12 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
-    /**
-     * Constructor for objects of class Estudiante
+    /** 
+     * Función: inicializar el objeto Estudiante.
+     * 
+     * @param nombre del Estudiante, codigo del Estudiante, carrera a la cual pertence, 
+     * numero de telefono para poder relizar un contacto en caso de ser necesario.
+     * @return none.
      */
     public Estudiante(String nombre, String codigo, String carrera, String telefono) {
         // initialise instance variables
@@ -55,7 +62,13 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
-    public String toString() { // metodo para convertir a string
+    /** 
+     * Función: genera un string con todos los datos guardados.
+     * 
+     * @param none.
+     * @return cadena de string con los datos que estaban dentro de el objeto.
+     */
+    public String toString() {
         return "Estudiante: " + nombre + ", Codigo: " + codigo + ", " + carrera + ", " + telefono;
     }
 }

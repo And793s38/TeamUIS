@@ -2,7 +2,7 @@
  * Esta clasea crea los tutores con sus respectivas matertias.
  * 
  * @author TeamUis
- * @version (a version number or a date)
+ * @version 31/03/2020
  */
 
 public class Tutor {
@@ -13,6 +13,9 @@ public class Tutor {
     private String telefono;
     private Materia materia;
 
+    /**
+     * Getters y setters 
+     */
     public String getNombre() {
         return nombre;
     }
@@ -45,10 +48,13 @@ public class Tutor {
         this.telefono = telefono;
     }
 
-    /**
-     * Constructor for objects of class Tutor
+    /** 
+     * Función: inicializar el objeto Tutor.
+     * 
+     * @param nombre del Tutor, codigo del tutor, carrera a la cual pertence, 
+     * numero de telefono para poder relizar un contacto en caso de ser necesario y una Materia la cual el va dar tutorias.
+     * @return none.
      */
-
     public Tutor(String nombre, String codigo, String carrera, String telefono, Materia materia) {
         // initialise instance variables
         this.nombre = nombre;
@@ -58,7 +64,13 @@ public class Tutor {
         this.materia = materia;
     }
 
-    public String toString() { // metodo para convertir a string
+    /** 
+     * Función: genera un string con todos los datos guardados.
+     * 
+     * @param none.
+     * @return cadena de string con los datos que estaban dentro de el objeto.
+     */
+    public String toString() { 
         return "Tutor: " + nombre + ", Codigo: " + codigo + ", Carrera: " + carrera + ", Telefono: " + telefono
                 + ", Materia: " + materia.getNombre() + "\n ";
     }

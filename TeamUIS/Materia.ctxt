@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Materia
-comment0.text=\r\n\ Esta\ clase\ crea\ las\ materias\ requeridas\ por\ los\ estudiantes.\r\n\r\n\ @author\ (TeamUis)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Esta\ clase\ crea\ las\ materias\ requeridas\ por\ los\ estudiantes.\r\n\r\n\ @author\ TeamUis\r\n\ @version\ 31/03/2020\r\n
 comment1.params=
 comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ Getters\ y\ setters\ \r\n
 comment2.params=nombre
 comment2.target=void\ setNombre(java.lang.String)
 comment3.params=
@@ -15,10 +16,11 @@ comment6.params=id
 comment6.target=void\ setId(int)
 comment7.params=
 comment7.target=Materia()
-comment7.text=\r\n\ Constructor\ for\ objects\ of\ class\ Materia\r\n
+comment7.text=\r\n\ Constructor\ de\ la\ clase\ Materia\ para\ busquedas.\r\n
 comment8.params=nombre\ codigo
 comment8.target=Materia(java.lang.String,\ java.lang.String)
-comment8.text=\r\n\ Constructor\ for\ objects\ of\ class\ Materia\r\n
+comment8.text=\ \r\n\ Funci\u00F3n\:\ inicializar\ el\ objeto\ Materia.\r\n\ \r\n\ @param\ nombre\ de\ una\ materia\ y\ codigo\ de\ esta\ misma.\r\n\ @return\ none.\r\n
 comment9.params=
 comment9.target=java.lang.String\ toString()
+comment9.text=\ \r\n\ Funci\u00F3n\:\ genera\ un\ string\ con\ todos\ los\ datos\ guardados.\r\n\ \r\n\ @param\ none.\r\n\ @return\ cadena\ de\ string\ con\ los\ datos\ que\ estaban\ dentro\ de\ el\ objeto.\r\n
 numComments=10

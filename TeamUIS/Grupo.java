@@ -1,22 +1,23 @@
-
 import java.util.*;
-
 /**
- * Esta clase crea y gestiona los diferentes grupos de estudio.
+ * Esta clase crea y gestiona los diferentes grupos de estudio, a.
  * 
  * @author TeamUis
- * @version (a version number or a date)
+ * @version 31/03/2020
  */
 
 public class Grupo {
-    // instance variables - replace the example below with your own
+    // instance variables 
     private ArrayList<Estudiante> estudiantes;
     private Tutor tutor;
     private Materia materia;
     private String detalles;
     private int id;
 
-    /* getters y setters */
+    /**
+     * Getters y setters 
+     */
+    
     public ArrayList<Estudiante> getEstudiantes() {
         return estudiantes;
     }
@@ -57,16 +58,22 @@ public class Grupo {
         this.detalles = detalles;
     }
 
-    /**
-     * Constructor grupo vacío para busquedas
+    /** 
+     * Función: este metodo se empleara en los contenedores para guardar una busqeuda.
+     * 
+     * @param none.
+     * @return none.
      */
     public Grupo() {
     }
 
-    /**
-     * Constructor para crear grupo con tutor
+    /** 
+     * Función: inicializar el objeto Grupo con un estudiante y un tutor.
+     * 
+     * @param nombre del Estudiante que quiere generar el grupo, Tutor que da tutorias de la materia para el grupo, 
+     * Materia de la cual se solicita el tutor y detalles que va a ser el lugar de encuentro para la tutoria.
+     * @return none.
      */
-
     public Grupo(Estudiante estudiante, Tutor tutor, Materia materia, String detalles) {
         // initialise instance variables
         estudiantes = new ArrayList();
@@ -76,8 +83,14 @@ public class Grupo {
         this.detalles = detalles;
     }
 
-    /**
-     * Constructor para crear grupo con solo estudiantes
+    /** 
+     * Función: inicializar el objeto Grupo con solo estudiantes.
+     * 
+     * @param nombre del Estudiante que quiere generar el grupo, 
+     * @param Materia de la cual se solicita el tutor 
+     * @param detalles este va a ser el lugar de encuentro para la tutoria, una breve descripcion para ubicarlo de 
+     * manera facil.
+     * @return none.
      */
     public Grupo(Estudiante estudiante, Materia materia, String detalles) {
         // initialise instance variables
@@ -87,14 +100,32 @@ public class Grupo {
         this.detalles = detalles;
     }
 
+    /** 
+     * Función: por medio de este metodo se van a agregar mas estudiantes de un grupo de estudio que ya cuente con tutor o no.
+     * 
+     * @param estudiante estudiante que se quiere incluir al grupo de estudio.
+     * @return none.
+     */
     public void agregarEstudiante(Estudiante estudiante) {
         estudiantes.add(estudiante);
     }
 
+    /** 
+     * Función: por medio de este metodo se van a elimianr los estudiantes que  pertencen a un grupo de estudio.
+     * 
+     * @param Objeto del estudiante que se quiere incluir al grupo de estudio.
+     * @return none.
+     */
     public void eliminarEstudiante(Estudiante estudiante) {
         estudiantes.remove(estudiante);
     }
 
+    /** 
+     * Función: por medio de este metodo se van a listar los grupos de estudio con todos sus instegrantes y tutores.
+     * 
+     * @param none.
+     * @return none.
+     */
     public void listarIntegrantesGrupo() {
         System.out.println("----------------------------");
         System.out.println("Grupo: " + this.id + " Materia: " + this.materia.getNombre());
@@ -111,7 +142,13 @@ public class Grupo {
         System.out.println("----------------------------");
     }
 
-    public String toString() { // metodo para convertir a string
+    /** 
+     * Función: genera un string con todos los datos guardados.
+     * 
+     * @param none.
+     * @return cadena de string con los datos que estaban dentro de el objeto.
+     */
+    public String toString() {
         if (this.tutor == null) {
             return "Codigo: " + this.id + ", Materia: " + this.materia.getNombre() + "\n Detalles: " + detalles;
         } else {

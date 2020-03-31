@@ -1,10 +1,9 @@
 import java.util.Scanner;
-
 /**
  * Write a description of class Main here.
  * 
  * @author TeamUis
- * @version (a version number or a date)
+ * @version 31/03/2020
  */
 public class Main {
     // instance variables - replace the example below with your own
