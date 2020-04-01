@@ -23,7 +23,7 @@ public class contenedorGrupos
         grupos = new ArrayList();
     }
     
-        public int getId() {
+       public int getId() {
         return id;
     }
 

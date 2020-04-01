@@ -20,23 +20,23 @@ C:\Users\usuario\Desktop\TeamUIS\TeamUIS\doc
 UTF-8
 -charset
 UTF-8
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java
 <---- end of javadoc command ---->
-Loading source file C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java...
+Loading source file C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java...
 Constructing Javadoc information...
 Standard Doclet version 11.0.2
 Building tree for all the packages and classes...
-Generating C:\Users\usuario\Desktop\TeamUIS\TeamUIS\doc\contenedorMaterias.html...
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:19: warning - Tag @return cannot be used in constructor documentation.  It can only be used in the following types of documentation: method.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:18: warning - @param argument "none" is not a parameter name.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:30: warning - @param argument "none" is not a parameter name.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:34: warning - @return tag cannot be used in method with void return type.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:44: warning - @param argument "none" is not a parameter name.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:47: warning - @return tag cannot be used in method with void return type.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:54: warning - @param argument "none" is not a parameter name.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:64: warning - @param argument "none" is not a parameter name.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:67: warning - @return tag cannot be used in method with void return type.
-C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorMaterias.java:79: warning - @param argument "id" is not a parameter name.
+Generating C:\Users\usuario\Desktop\TeamUIS\TeamUIS\doc\contenedorGrupos.html...
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:20: warning - Tag @return cannot be used in constructor documentation.  It can only be used in the following types of documentation: method.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:19: warning - @param argument "none" is not a parameter name.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:34: warning - @param argument "none" is not a parameter name.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:37: warning - @return tag cannot be used in method with void return type.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:46: warning - @param argument "none" is not a parameter name.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:49: warning - @return tag cannot be used in method with void return type.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:57: warning - @param argument "none" is not a parameter name.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:67: warning - @param argument "none" is not a parameter name.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:71: warning - @return tag cannot be used in method with void return type.
+C:\Users\usuario\Desktop\TeamUIS\TeamUIS\contenedorGrupos.java:83: warning - @param argument "id" is not a parameter name.
 Generating C:\Users\usuario\Desktop\TeamUIS\TeamUIS\doc\package-summary.html...
 Generating C:\Users\usuario\Desktop\TeamUIS\TeamUIS\doc\constant-values.html...
 Building index for all the packages and classes...
