@@ -179,5 +179,9 @@ public class Grupo {
                     + this.tutor.getNombre() + "\n Detalles: " + detalles;
         }
     }
+    
+    public ArrayList<Estudiante> listaEstudiantes(){
+        return estudiantes;
+    }
 
 }
