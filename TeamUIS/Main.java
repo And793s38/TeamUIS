@@ -23,10 +23,10 @@ public class Main {
         String telefono;
 
         // crear la materias
-        Materia Ingles1 = new Materia("Ingles1", "4444");
+        Materia Ingles1 = new Materia("Ingles 1", "4444");
         Materia Software1 = new Materia("Software", "3333");
-        Materia Bases1 = new Materia("Bases1", "2222");
-        Materia Calculo1 = new Materia("Calculo1", "1111");
+        Materia Bases1 = new Materia("Bases 1", "2222");
+        Materia Calculo1 = new Materia("Calculo 1", "1111");
 
         // crear los tutores
         Tutor tutor1 = new Tutor("Jair Panqueva", "1001", "Ing. Sistemas", "304312121", Software1);
