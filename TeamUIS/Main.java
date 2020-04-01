@@ -169,58 +169,58 @@ public class Main {
             System.out.println(" Que deseas hacer? ");
             System.out.println("    1.Listar Materias disponibles ");
             System.out.println("    2.Listar Grupos de Estudio ");
-            if(dato == 1){
-            System.out.println("    3.Unirse a un Grupos de Estudio ");
-            }else if(dato ==2){
+            if (dato == 1) {
+                System.out.println("    3.Unirse a un Grupos de Estudio ");
+            } else if (dato == 2) {
                 System.out.println("    3.Crear Grupo de Estudio ");
             }
-            System.out.println("    0.Salir ");   
-            
+            System.out.println("    0.Salir ");
+
             accion = AC.nextInt();
-            
+
             switch (accion) {
                 case 0:
                     System.out.println(" Adiós ");
-                break;
+                    break;
                 case 1:
                     contenedorM.ToStringMaterias();
-                break;
+                    break;
                 case 2:
                     contenedorG.ToStringGrupos();
-                break; 
+                    break;
                 case 3:
-                if(dato==1){
-                    System.out.println(" A que grupo desea unirse? ingrese el id ");
-                    contenedorG.ToStringGrupos();
-                    Scanner UG = new Scanner(System.in);
-                    int idU = UG.nextInt();
-                    contenedorG.buscarGrupo(idU).agregarEstudiante(Logestudiante);
-                }else{
-                    Materia materia = new Materia();
-                    Scanner UN = new Scanner(System.in);
-                    System.out.println(" De que materia será el grupo? ");
-                    int idM = 0;
-                    while (idM == 0) {
-                        System.out.println(" Por favor ingrese el id de su materia, de no conocerlo digite 0 ");
-                        idM = entradaEscaner.nextInt();
-                        int mx = contenedorM.getId();
-                        if (idM == 0) {
-                            contenedorM.ToStringMaterias();
-                        } else if (idM > mx || idM < 0) {
-                            System.out.println("No existe la asignatura escogida");
-                            idM = 0;
-                        } else {
-                            materia = contenedorM.buscarMateria(idM);
+                    if (dato == 1) {
+                        System.out.println(" A que grupo desea unirse? ingrese el id ");
+                        contenedorG.ToStringGrupos();
+                        Scanner UG = new Scanner(System.in);
+                        int idU = UG.nextInt();
+                        contenedorG.buscarGrupo(idU).agregarEstudiante(Logestudiante);
+                    } else {
+                        Materia materia = new Materia();
+                        Scanner UN = new Scanner(System.in);
+                        System.out.println(" De que materia será el grupo? ");
+                        int idM = 0;
+                        while (idM == 0) {
+                            System.out.println(" Por favor ingrese el id de su materia, de no conocerlo digite 0 ");
+                            idM = entradaEscaner.nextInt();
+                            int mx = contenedorM.getId();
+                            if (idM == 0) {
+                                contenedorM.ToStringMaterias();
+                            } else if (idM > mx || idM < 0) {
+                                System.out.println("No existe la asignatura escogida");
+                                idM = 0;
+                            } else {
+                                materia = contenedorM.buscarMateria(idM);
+                            }
                         }
+                        Scanner de = new Scanner(System.in);
+                        System.out.println(" Por favor agregue detalles sobre el grupo ");
+                        String details = de.nextLine();
+                        Grupo LogG = new Grupo(Logtutor, materia, details);
+                        contenedorG.agregarGrupo(LogG);
+                        contenedorG.ToStringGrupos();
                     }
-                    Scanner de = new Scanner(System.in);
-                    System.out.println(" Por favor agregue detalles sobre el grupo ");
-                    String details = de.nextLine();
-                    Grupo LogG = new Grupo(Logtutor,materia, details);
-                    contenedorG.agregarGrupo(LogG);
-                    contenedorG.ToStringGrupos();
-                }
-                break;
+                    break;
                 default:
                     System.out.println(" La acción no es valida ");
             }
