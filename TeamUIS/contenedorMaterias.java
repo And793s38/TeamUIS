@@ -48,6 +48,11 @@ public class contenedorMaterias
         materias.remove(materia);
     }
 
+    
+    public int getId() {
+        return id;
+    }
+    
     /**
      * Función: este metodo genera un listado con todas las Materias que estan
      * registradas.

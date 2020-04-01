@@ -22,6 +22,10 @@ public class contenedorGrupos
     public contenedorGrupos() {
         grupos = new ArrayList();
     }
+    
+        public int getId() {
+        return id;
+    }
 
     /**
      * Función: metodo que al agregar grupos va autoincrementado su id para

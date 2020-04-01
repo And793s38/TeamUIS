@@ -13,7 +13,7 @@ public class Estudiante {
     private String telefono;
 
     /**
-     * Getters y setters 
+     * Getters y setters
      */
     public String getNombre() {
         return nombre;
@@ -47,11 +47,16 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
-    /** 
+    public Estudiante() {
+        // initialise instance variables
+    }
+    
+    /**
      * Función: inicializar el objeto Estudiante.
      * 
-     * @param nombre del Estudiante, codigo del Estudiante, carrera a la cual pertence, 
-     * numero de telefono para poder relizar un contacto en caso de ser necesario.
+     * @param nombre del Estudiante, codigo del Estudiante, carrera a la cual
+     *               pertence, numero de telefono para poder relizar un contacto en
+     *               caso de ser necesario.
      * @return none.
      */
     public Estudiante(String nombre, String codigo, String carrera, String telefono) {
@@ -62,13 +67,13 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
-    /** 
+    /**
      * Función: genera un string con todos los datos guardados.
      * 
      * @param none.
      * @return cadena de string con los datos que estaban dentro de el objeto.
      */
     public String toString() {
-        return "Estudiante: " + nombre + ", Codigo: " + codigo + ", " + carrera + ", " + telefono;
+        return "Estudiante: " + nombre + ", Codigo: " + codigo + ", Carrera: " + carrera + ", Telefono: " + telefono;
     }
 }

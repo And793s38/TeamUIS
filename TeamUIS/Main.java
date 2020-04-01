@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 /**
  * Write a description of class Main here.
  * 
@@ -11,10 +12,16 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-        public static void main(String[] args) throws Exception {
-        int dato=0;
-        int accion=30;
-               
+    public static void main(String[] args) throws Exception {
+        int dato = 0;
+        int accion = 30;
+        Estudiante Logestudiante = new Estudiante();
+        Tutor Logtutor = new Tutor();
+        String nombre;
+        String codigo;
+        String carrera;
+        String telefono;
+
         // crear la materias
         Materia Ingles1 = new Materia("Ingles1", "4444");
         Materia Software1 = new Materia("Software", "3333");
@@ -48,7 +55,7 @@ public class Main {
         contenedorGrupos contenedorG = new contenedorGrupos();
         contenedorG.agregarGrupo(grupo1);
         contenedorG.agregarGrupo(grupo2);
-        
+
         // crear contendor de grupos
         contenedorMaterias contenedorM = new contenedorMaterias();
         contenedorM.agregarMateria(Ingles1);
@@ -74,73 +81,150 @@ public class Main {
         // lista de grupos
         /* contenedorG.ToStringGrupos(); */
         System.out.println(" Bienvenido a TeamUIS ");
-
+        System.out.println("----------------------------");
         System.out.println(" Quieres iniciar como estudiante(1) o Tutor (2)? ");
-        Scanner entradaEscaner = new Scanner (System.in); 
-        try{
-            dato = entradaEscaner.nextInt(); 
+        Scanner entradaEscaner = new Scanner(System.in);
+        try {
+            dato = entradaEscaner.nextInt();
+        } catch (Exception excepcion) {
         }
-        catch(Exception excepcion){
-        }
-         
-        if(dato == 1){
+
+        System.out.println("----------------------------");
+
+        if (dato == 1) {
             System.out.println(" Estudiante ");
-            String nombre;
+            Scanner N = new Scanner(System.in);
+
             System.out.println(" Por favor ingrese su nombre ");
-            nombre = entradaEscaner.nextLine(); 
-            
-            String codigo;
+            nombre = N.nextLine();
+
+            Scanner C = new Scanner(System.in);
+
             System.out.println(" Su codigo ");
-            codigo = entradaEscaner.nextLine(); 
-            
-            String carrera;
+            codigo = C.nextLine();
+
+            Scanner CR = new Scanner(System.in);
+
             System.out.println(" Su carrera ");
-            carrera = entradaEscaner.nextLine(); 
-            
-            String telefono;
+            carrera = CR.nextLine();
+
+            Scanner T = new Scanner(System.in);
+
             System.out.println(" Su telefono ");
-            telefono = entradaEscaner.nextLine(); 
-            
-            Estudiante Logestudiante = new Estudiante(nombre, codigo, carrera, telefono);
-        
-        }else if(dato == 2){
-            System.out.println(" Tutor ");   
-            String nombre;
-            String codigo;
-            String carrera;
-            String telefono;
+            telefono = T.nextLine();
+
+            Logestudiante = new Estudiante(nombre, codigo, carrera, telefono);
+            System.out.println(Logestudiante.toString());
+
+        } else if (dato == 2) {
+            System.out.println(" Tutor ");
             Materia materia = new Materia();
             int idM = 0;
-        
+
+            Scanner N = new Scanner(System.in);
+
             System.out.println(" Por favor ingrese su nombre ");
-            nombre = entradaEscaner.nextLine(); 
-            System.out.println(" Por favor ingrese su codigo ");
-            codigo = entradaEscaner.nextLine(); 
-            System.out.println(" Por favor ingrese su carrera ");
-            carrera = entradaEscaner.nextLine(); 
-            System.out.println(" Por favor ingrese su telefono ");
-            telefono = entradaEscaner.nextLine(); 
-            
-            while(idM==0){
+            nombre = N.nextLine();
+
+            Scanner C = new Scanner(System.in);
+
+            System.out.println(" Su codigo ");
+            codigo = C.nextLine();
+
+            Scanner CR = new Scanner(System.in);
+
+            System.out.println(" Su carrera ");
+            carrera = CR.nextLine();
+
+            Scanner T = new Scanner(System.in);
+
+            System.out.println(" Su telefono ");
+            telefono = T.nextLine();
+
+            while (idM == 0) {
                 System.out.println(" Por favor ingrese el id de su materia, de no conocerlo digite 0 ");
-                    idM = entradaEscaner.nextInt();
-                    if(idM == 0){
-                        contenedorM.ToStringMaterias();
-                    }else{
-                        materia = contenedorM.buscarMateria(idM);
-                    }
-            }       
-            
-            Tutor Logtutor = new Tutor(nombre, codigo, carrera, telefono, materia);
-            
-        }else{
-            System.out.println(" Entrada no valida "); 
+                idM = entradaEscaner.nextInt();
+                int mx = contenedorM.getId();
+                if (idM == 0) {
+                    contenedorM.ToStringMaterias();
+                } else if (idM > mx || idM < 0) {
+                    System.out.println("No existe la asignatura escogida");
+                    idM = 0;
+                } else {
+                    materia = contenedorM.buscarMateria(idM);
+                }
+            }
+
+            Logtutor = new Tutor(nombre, codigo, carrera, telefono, materia);
+            System.out.println(Logtutor.toString());
+        } else {
+            System.out.println(" Entrada no valida ");
             accion = 0;
         }
 
-        while(accion!=0) {
-            System.out.println(" Que desea hacer? "); 
-            accion = 1;
+        System.out.println("----------------------------");
+
+        while (accion != 0) {
+            Scanner AC = new Scanner(System.in);
+            System.out.println(" Que deseas hacer? ");
+            System.out.println("    1.Listar Materias disponibles ");
+            System.out.println("    2.Listar Grupos de Estudio ");
+            if(dato == 1){
+            System.out.println("    3.Unirse a un Grupos de Estudio ");
+            }else if(dato ==2){
+                System.out.println("    3.Crear Grupo de Estudio ");
+            }
+            System.out.println("    0.Salir ");   
+            
+            accion = AC.nextInt();
+            
+            switch (accion) {
+                case 0:
+                    System.out.println(" Adiós ");
+                break;
+                case 1:
+                    contenedorM.ToStringMaterias();
+                break;
+                case 2:
+                    contenedorG.ToStringGrupos();
+                break; 
+                case 3:
+                if(dato==1){
+                    System.out.println(" A que grupo desea unirse? ingrese el id ");
+                    contenedorG.ToStringGrupos();
+                    Scanner UG = new Scanner(System.in);
+                    int idU = UG.nextInt();
+                    contenedorG.buscarGrupo(idU).agregarEstudiante(Logestudiante);
+                }else{
+                    Materia materia = new Materia();
+                    Scanner UN = new Scanner(System.in);
+                    System.out.println(" De que materia será el grupo? ");
+                    int idM = 0;
+                    while (idM == 0) {
+                        System.out.println(" Por favor ingrese el id de su materia, de no conocerlo digite 0 ");
+                        idM = entradaEscaner.nextInt();
+                        int mx = contenedorM.getId();
+                        if (idM == 0) {
+                            contenedorM.ToStringMaterias();
+                        } else if (idM > mx || idM < 0) {
+                            System.out.println("No existe la asignatura escogida");
+                            idM = 0;
+                        } else {
+                            materia = contenedorM.buscarMateria(idM);
+                        }
+                    }
+                    Scanner de = new Scanner(System.in);
+                    System.out.println(" Por favor agregue detalles sobre el grupo ");
+                    String details = de.nextLine();
+                    Grupo LogG = new Grupo(Logtutor,materia, details);
+                    contenedorG.agregarGrupo(LogG);
+                    contenedorG.ToStringGrupos();
+                }
+                break;
+                default:
+                    System.out.println(" La acción no es valida ");
+            }
+
         }
 
     }

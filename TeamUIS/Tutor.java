@@ -1,4 +1,5 @@
 import java.util.*;
+
 /**
  * Esta clasea crea los tutores con sus respectivas matertias.
  * 
@@ -13,10 +14,9 @@ public class Tutor {
     private String carrera;
     private String telefono;
     private ArrayList<Materia> materias;
-    materias = new ArrayList();
 
     /**
-     * Getters y setters 
+     * Getters y setters
      */
     public String getNombre() {
         return nombre;
@@ -57,12 +57,18 @@ public class Tutor {
     public void EliminarMateria(Materia materia) {
         materias.remove(materia);
     }
-
+    
+    public Tutor() {
+        // initialise instance variables
+    }
+    
     /**
      * Constructor for objects of class Tutor
      */
     public Tutor(String nombre, String codigo, String carrera, String telefono, Materia materia) {
         // initialise instance variables
+        
+        materias = new ArrayList();
         this.nombre = nombre;
         this.codigo = codigo;
         this.carrera = carrera;

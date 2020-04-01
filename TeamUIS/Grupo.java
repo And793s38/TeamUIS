@@ -1,4 +1,5 @@
 import java.util.*;
+
 /**
  * Esta clase crea y gestiona los diferentes grupos de estudio, a.
  * 
@@ -7,7 +8,7 @@ import java.util.*;
  */
 
 public class Grupo {
-    // instance variables 
+    // instance variables
     private ArrayList<Estudiante> estudiantes;
     private Tutor tutor;
     private Materia materia;
@@ -15,9 +16,9 @@ public class Grupo {
     private int id;
 
     /**
-     * Getters y setters 
+     * Getters y setters
      */
-    
+
     public ArrayList<Estudiante> getEstudiantes() {
         return estudiantes;
     }
@@ -58,8 +59,9 @@ public class Grupo {
         this.detalles = detalles;
     }
 
-    /** 
-     * Función: este metodo se empleara en los contenedores para guardar una busqeuda.
+    /**
+     * Función: este metodo se empleara en los contenedores para guardar una
+     * busqeuda.
      * 
      * @param none.
      * @return none.
@@ -67,11 +69,29 @@ public class Grupo {
     public Grupo() {
     }
 
-    /** 
+        /**
      * Función: inicializar el objeto Grupo con un estudiante y un tutor.
      * 
-     * @param nombre del Estudiante que quiere generar el grupo, Tutor que da tutorias de la materia para el grupo, 
-     * Materia de la cual se solicita el tutor y detalles que va a ser el lugar de encuentro para la tutoria.
+     * @param nombre del Estudiante que quiere generar el grupo, Tutor que da
+     *               tutorias de la materia para el grupo, Materia de la cual se
+     *               solicita el tutor y detalles que va a ser el lugar de encuentro
+     *               para la tutoria.
+     * @return none.
+     */
+    public Grupo(Tutor tutor, Materia materia, String detalles) {
+        // initialise instance variables
+        this.materia = materia;
+        this.tutor = tutor;
+        this.detalles = detalles;
+    }
+    
+    /**
+     * Función: inicializar el objeto Grupo con un estudiante y un tutor.
+     * 
+     * @param nombre del Estudiante que quiere generar el grupo, Tutor que da
+     *               tutorias de la materia para el grupo, Materia de la cual se
+     *               solicita el tutor y detalles que va a ser el lugar de encuentro
+     *               para la tutoria.
      * @return none.
      */
     public Grupo(Estudiante estudiante, Tutor tutor, Materia materia, String detalles) {
@@ -83,13 +103,13 @@ public class Grupo {
         this.detalles = detalles;
     }
 
-    /** 
+    /**
      * Función: inicializar el objeto Grupo con solo estudiantes.
      * 
-     * @param nombre del Estudiante que quiere generar el grupo, 
-     * @param Materia de la cual se solicita el tutor 
-     * @param detalles este va a ser el lugar de encuentro para la tutoria, una breve descripcion para ubicarlo de 
-     * manera facil.
+     * @param nombre   del Estudiante que quiere generar el grupo,
+     * @param Materia  de la cual se solicita el tutor
+     * @param detalles este va a ser el lugar de encuentro para la tutoria, una
+     *                 breve descripcion para ubicarlo de manera facil.
      * @return none.
      */
     public Grupo(Estudiante estudiante, Materia materia, String detalles) {
@@ -100,8 +120,9 @@ public class Grupo {
         this.detalles = detalles;
     }
 
-    /** 
-     * Función: por medio de este metodo se van a agregar mas estudiantes de un grupo de estudio que ya cuente con tutor o no.
+    /**
+     * Función: por medio de este metodo se van a agregar mas estudiantes de un
+     * grupo de estudio que ya cuente con tutor o no.
      * 
      * @param estudiante estudiante que se quiere incluir al grupo de estudio.
      * @return none.
@@ -110,8 +131,9 @@ public class Grupo {
         estudiantes.add(estudiante);
     }
 
-    /** 
-     * Función: por medio de este metodo se van a elimianr los estudiantes que  pertencen a un grupo de estudio.
+    /**
+     * Función: por medio de este metodo se van a elimianr los estudiantes que
+     * pertencen a un grupo de estudio.
      * 
      * @param Objeto del estudiante que se quiere incluir al grupo de estudio.
      * @return none.
@@ -120,8 +142,9 @@ public class Grupo {
         estudiantes.remove(estudiante);
     }
 
-    /** 
-     * Función: por medio de este metodo se van a listar los grupos de estudio con todos sus instegrantes y tutores.
+    /**
+     * Función: por medio de este metodo se van a listar los grupos de estudio con
+     * todos sus instegrantes y tutores.
      * 
      * @param none.
      * @return none.
@@ -142,7 +165,7 @@ public class Grupo {
         System.out.println("----------------------------");
     }
 
-    /** 
+    /**
      * Función: genera un string con todos los datos guardados.
      * 
      * @param none.
