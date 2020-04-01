@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Main {
     // instance variables - replace the example below with your own
-
+    
     /**
      * @param args the command line arguments
      */
@@ -37,7 +37,7 @@ public class Main {
         // crear los estudiantes
         Estudiante estudiante1 = new Estudiante("Brain Jose", "216001", "ing. Sistemas", "312212121");
         Estudiante estudiante2 = new Estudiante("Jose Arturo", "216002", "ing. Electrica", "312212120");
-        Estudiante estudiante3 = new Estudiante("Brain Jose", "216003", "ing. Petroleos", "312212122");
+        Estudiante estudiante3 = new Estudiante("Juan", "216003", "ing. Petroleos", "312212122");
         Estudiante estudiante4 = new Estudiante("Sebastian Tami", "216004", "ing. Industrial", "312212123");
 
         // crear los grupos
