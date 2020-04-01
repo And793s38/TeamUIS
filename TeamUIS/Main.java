@@ -174,6 +174,7 @@ public class Main {
             } else if (dato == 2) {
                 System.out.println("    3.Crear Grupo de Estudio ");
             }
+            System.out.println("    4.Agregar Materia ");
             System.out.println("    0.Salir ");
 
             accion = AC.nextInt();
@@ -202,14 +203,25 @@ public class Main {
                         int idM = 0;
                         while (idM == 0) {
                             System.out.println(" Por favor ingrese el id de su materia, de no conocerlo digite 0 ");
+                            System.out.println(" De no existir la asignatura ingrese -1 ");
                             idM = entradaEscaner.nextInt();
                             int mx = contenedorM.getId();
                             if (idM == 0) {
                                 contenedorM.ToStringMaterias();
-                            } else if (idM > mx || idM < 0) {
+                            } else if (idM > mx || idM < -1) {
                                 System.out.println("No existe la asignatura escogida");
                                 idM = 0;
-                            } else {
+                            }  else if (idM == -1) {
+                                Scanner NA = new Scanner(System.in);
+                                System.out.println(" Por favor ingrese nombre de la asignatura ");
+                                String na = NA.nextLine();
+                                Scanner CA = new Scanner(System.in);
+                                System.out.println(" Su codigo ");
+                                String ca = CA.nextLine();
+                                Materia LogMateria = new Materia(na,ca);
+                                contenedorM.agregarMateria(LogMateria);
+                                materia = LogMateria;
+                            }else {
                                 materia = contenedorM.buscarMateria(idM);
                             }
                         }
@@ -221,7 +233,18 @@ public class Main {
                         contenedorG.ToStringGrupos();
                     }
                     break;
-                default:
+                    case 4:
+                    Scanner NA = new Scanner(System.in);
+                    System.out.println(" Por favor ingrese nombre de la asignatura ");
+                    String na = NA.nextLine();
+                    Scanner CA = new Scanner(System.in);
+                    System.out.println(" Su codigo ");
+                    String ca = CA.nextLine();
+                    Materia LogMateria = new Materia(na,ca);
+                    contenedorM.agregarMateria(LogMateria);
+                    contenedorM.ToStringMaterias();
+                    break;
+                    default:
                     System.out.println(" La acción no es valida ");
             }
 
